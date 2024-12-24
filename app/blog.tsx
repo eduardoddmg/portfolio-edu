@@ -9,7 +9,7 @@ const Blog = () => {
   const { tagline, title, description, buttonText, posts } = blogData;
 
   return (
-    <section className="py-32">
+    <section>
       <div className="container flex flex-col items-center gap-16 lg:px-16">
         <div className="text-center">
           <p className="mb-6 text-xs font-medium uppercase tracking-wider">

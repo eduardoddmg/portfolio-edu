@@ -51,14 +51,16 @@ const Navbar1 = () => {
         </nav>
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <img
-                src="https://shadcnblocks.com/images/block/block-1.svg"
-                className="w-8"
-                alt="logo"
-              />
-              <span className="text-xl font-bold">Eduardo Melo</span>
-            </div>
+            <Link href="/">
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://shadcnblocks.com/images/block/block-1.svg"
+                  className="w-8"
+                  alt="logo"
+                />
+                <span className="text-xl font-bold">Eduardo Melo</span>
+              </div>
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon">

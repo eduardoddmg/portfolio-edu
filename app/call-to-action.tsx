@@ -3,7 +3,7 @@ import lp from '@/data/lp.json';
 
 const CTA = () => {
   return (
-    <section className="py-32">
+    <section>
       <div className="container">
         <div className="flex w-full flex-col gap-16 overflow-hidden rounded-lg bg-accent p-8 md:rounded-xl lg:flex-row lg:items-center lg:p-16">
           <div className="flex-1">

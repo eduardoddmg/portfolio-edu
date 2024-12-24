@@ -7,7 +7,7 @@ import lp from '@/data/lp.json';
 
 const Hero = () => {
   return (
-    <section className="py-32">
+    <section>
       <div className="container">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">

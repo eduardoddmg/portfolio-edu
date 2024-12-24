@@ -5,7 +5,7 @@ import Hero from './hero';
 
 const Page = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-20">
       <Hero />
       <Features />
       <CTA />
