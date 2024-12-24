@@ -14,14 +14,25 @@ import {
 } from '@/components/ui/breadcrumb';
 import { Skeleton } from '@/components/ui/skeleton';
 
-interface ContentItem {
-  type: 'paragraph' | 'code' | 'image';
-  text?: string;
-  code?: string;
-  language?: string;
-  src?: string;
+// Tipos discriminados para o conteúdo do blog
+interface ParagraphContent {
+  type: 'paragraph';
+  text: string;
+}
+
+interface CodeContent {
+  type: 'code';
+  language: string;
+  code?: string | null | undefined;
+}
+
+interface ImageContent {
+  type: 'image';
+  src: string;
   alt?: string;
 }
+
+type ContentItem = ParagraphContent | CodeContent | ImageContent;
 
 interface BlogPostProps {
   id: string;
@@ -42,10 +53,10 @@ export default function BlogPost() {
 
     if (!id) return;
 
-    // Simulação de busca
-    const res: BlogPostProps | undefined | null = blog.posts.find(
+    // Busca simulada
+    const res: BlogPostProps | null | undefined = blog.posts.find(
       (item) => item.id === id
-    );
+    ) as BlogPostProps | undefined;
 
     setTimeout(() => {
       if (!res) {
@@ -112,7 +123,9 @@ export default function BlogPost() {
                 <code className={`language-${item.language}`}>{item.code}</code>
               </pre>
             )}
-            {item.type === 'image' && <img src={item.src} alt={item.alt} />}
+            {item.type === 'image' && (
+              <img src={item.src} alt={item.alt || 'Imagem'} />
+            )}
             <br />
           </div>
         ))}
