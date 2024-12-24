@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "id": "post-1",
+      "title": "React e Next.js: Como criar interfaces performáticas",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Neste artigo, exploramos como utilizar React e Next.js para desenvolver aplicações web rápidas, acessíveis e otimizadas para SEO."
+        },
+        {
+          "type": "paragraph",
+          "text": "Com React, você pode criar componentes reutilizáveis que facilitam a manutenção do código. Já o Next.js fornece ferramentas incríveis como Server-Side Rendering (SSR) e Static Site Generation (SSG), tornando o processo de desenvolvimento ainda mais eficiente."
+        },
+        {
+          "type": "code",
+          "language": "tsx",
+          "code": "import React from 'react';\n\nconst Component = () => {\n  return <h1>Hello, Next.js!</h1>;\n};\n\nexport default Component;"
+        },
+        {
+          "type": "paragraph",
+          "text": "Aprenda as melhores práticas e dê um salto na qualidade das suas interfaces."
+        }
+      ],
+      "label": "Desenvolvimento Web",
+      "author": "Eduardo Melo",
+      "published": "15 Jan 2024",
+      "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+    },
+    {
+      "id": "post-2",
+      "title": "Melhores práticas com TypeScript",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "TypeScript tem se tornado uma ferramenta essencial para desenvolvedores que desejam escrever código mais seguro e escalável."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neste artigo, discutimos as melhores práticas para trabalhar com TypeScript, incluindo como definir tipos personalizados, utilizar interfaces e aplicar conceitos de generics."
+        },
+        {
+          "type": "code",
+          "language": "typescript",
+          "code": "interface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nconst user: User = {\n  id: 1,\n  name: 'Eduardo',\n  email: 'eduardo@email.com'\n};"
+        },
+        {
+          "type": "paragraph",
+          "text": "Descubra como essa linguagem de tipagem estática pode transformar sua experiência de desenvolvimento, prevenindo erros comuns e melhorando a produtividade."
+        }
+      ],
+      "label": "TypeScript",
+      "author": "Eduardo Melo",
+      "published": "10 Jan 2024",
+      "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+    },
+    {
+      "id": "post-3",
+      "title": "Automação e IA: O poder do Python",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Python é amplamente reconhecido por sua versatilidade e poder na área de automação e inteligência artificial."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neste artigo, mostramos como você pode criar soluções de automação para tarefas repetitivas, aumentando a eficiência no trabalho."
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "code": "def greet(name):\n    return f'Hello, {name}!'\n\nprint(greet('Eduardo'))"
+        },
+        {
+          "type": "paragraph",
+          "text": "Também discutimos como construir ferramentas de IA com bibliotecas como TensorFlow e PyTorch, alavancando a capacidade de processamento de dados e aprendizado de máquina."
+        }
+      ],
+      "label": "Inteligência Artificial",
+      "author": "Eduardo Melo",
+      "published": "5 Jan 2024",
+      "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "hero": {
+    "badge": "Disponível para novas oportunidades",
+    "title": "Eduardo Melo",
+    "description": "Sou Eduardo Melo, um desenvolvedor frontend especializado em React e Next.js. Transformo ideias em experiências digitais excepcionais e busco contribuir para o sucesso de empresas inovadoras.",
+    "primaryButton": "Entre em contato",
+    "secondaryButton": "Veja meus projetos"
+  },
+  "features": {
+    "title": "Minhas Especialidades",
+    "items": [
+      {
+        "title": "React e Next.js",
+        "description": "Criação de interfaces modernas, performáticas e otimizadas para SEO utilizando React e Next.js.",
+        "icon": "Layout"
+      },
+      {
+        "title": "TypeScript",
+        "description": "Desenvolvimento de código robusto e escalável com TypeScript, garantindo alta qualidade e segurança.",
+        "icon": "Code"
+      },
+      {
+        "title": "PHP",
+        "description": "Soluções backend sólidas com PHP, oferecendo suporte para sistemas complexos e integrações eficazes.",
+        "icon": "Server"
+      },
+      {
+        "title": "Inteligência Artificial",
+        "description": "Criação de ferramentas baseadas em IA com Python, incluindo automação e engenharia de prompt.",
+        "icon": "BrainCircuit"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Design de interfaces elegantes e funcionais utilizando Figma e Photoshop para experiências intuitivas.",
+        "icon": "Paintbrush"
+      },
+      {
+        "title": "Bancos de Dados",
+        "description": "Gestão eficiente de bancos de dados SQL e NoSQL, otimizando performance e confiabilidade.",
+        "icon": "Database"
+      }
+    ]
+  },
+  "call-to-action": {
+    "title": "Vamos transformar ideias em soluções digitais?",
+    "description": "Estou em busca de oportunidades para contribuir com empresas inovadoras e criar experiências digitais incríveis. Vamos trabalhar juntos?",
+    "primaryButton": "Entre em contato agora",
+    "secondaryButton": "Conheça meu trabalho"
+  },
+  "blog": {
+    "tagline": "Artigos e insights",
+    "title": "Meu Blog",
+    "description": "Explore meus artigos e conteúdos sobre desenvolvimento web, tecnologias modernas e as melhores práticas da área.",
+    "buttonText": "Veja todos os artigos",
+    "posts": [
+      {
+        "id": "post-1",
+        "title": "React e Next.js: Como criar interfaces performáticas",
+        "summary": "Aprenda como utilizar React e Next.js para desenvolver aplicações web rápidas, acessíveis e otimizadas para SEO.",
+        "label": "Desenvolvimento Web",
+        "author": "Eduardo Melo",
+        "published": "15 Jan 2024",
+        "href": "#",
+        "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+      },
+      {
+        "id": "post-2",
+        "title": "Melhores práticas com TypeScript",
+        "summary": "Descubra como o TypeScript pode ajudar a escrever código mais seguro e reduzir erros em projetos escaláveis.",
+        "label": "TypeScript",
+        "author": "Eduardo Melo",
+        "published": "10 Jan 2024",
+        "href": "#",
+        "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+      },
+      {
+        "id": "post-3",
+        "title": "Automação e IA: O poder do Python",
+        "summary": "Veja como Python pode ser utilizado para criar soluções de automação e ferramentas baseadas em inteligência artificial.",
+        "label": "Inteligência Artificial",
+        "author": "Eduardo Melo",
+        "published": "5 Jan 2024",
+        "href": "#",
+        "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+      }
+    ]
+  },
+  "projects": {
+    "tagline": "Meus projetos de desenvolvimento",
+    "title": "Meus Projetos",
+    "description": "Confira alguns dos projetos que desenvolvi utilizando tecnologias modernas como React, Next.js, TypeScript, e mais.",
+    "buttonText": "Veja todos os projetos",
+    "items": [
+      {
+        "id": "economize",
+        "title": "Sistema de previsão de economia",
+        "summary": "Sistema simples para o usuário conseguir visualizar em quanto tempo e quanto de dinheiro precisa economizar para atingir o seu objetivo.",
+        "label": "Next.js, Shadcn",
+        "author": "Eduardo Melo",
+        "date": "Dez 2024",
+        "href": "#",
+        "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+      },
+      {
+        "id": "project-2",
+        "title": "Gerador de Dietas com GPT",
+        "summary": "Aplicação que utiliza GPT para gerar planos de dieta personalizados com base nas preferências do usuário.",
+        "label": "Next.js, OpenAI API",
+        "author": "Eduardo Melo",
+        "date": "Nov 2024",
+        "href": "#",
+        "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+      },
+      {
+        "id": "project-3",
+        "title": "Dashboard de Administração Escolar",
+        "summary": "Painel de controle para escolas com gerenciamento de alunos, professores e calendário acadêmico.",
+        "label": "React, TypeScript, Supabase",
+        "author": "Eduardo Melo",
+        "date": "Out 2024",
+        "href": "#",
+        "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+      },
+      {
+        "id": "project-4",
+        "title": "E-commerce com Produtos Dinâmicos",
+        "summary": "Plataforma de e-commerce com integração ao Stripe para criação de produtos dinâmicos e pagamentos.",
+        "label": "Next.js, Stripe",
+        "author": "Eduardo Melo",
+        "date": "Set 2024",
+        "href": "#",
+        "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+      },
+      {
+        "id": "project-5",
+        "title": "Plataforma de Freelancing",
+        "summary": "Sistema para conectar freelancers a clientes, com foco em usabilidade e design moderno.",
+        "label": "React, Tailwind",
+        "author": "Eduardo Melo",
+        "date": "Ago 2024",
+        "href": "#",
+        "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
+      }
+    ]
+  }
+}
