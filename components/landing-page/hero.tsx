@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
 import lp from '@/data/lp.json';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -22,13 +23,17 @@ const Hero = () => {
               {lp.hero.description}
             </p>
             <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              <Button className="w-full sm:w-auto">
-                {lp.hero.primaryButton}
-              </Button>
-              <Button variant="outline" className="w-full sm:w-auto">
-                {lp.hero.secondaryButton}
-                <ArrowDownRight className="ml-2 size-4" />
-              </Button>
+              <Link href={lp.hero.primaryButton.href}>
+                <Button className="w-full sm:w-auto">
+                  {lp.hero.primaryButton.text}
+                </Button>
+              </Link>
+              <Link href={lp.hero.secondaryButton.href}>
+                <Button variant="outline" className="w-full sm:w-auto">
+                  {lp.hero.secondaryButton.text}
+                  <ArrowDownRight className="ml-2 size-4" />
+                </Button>
+              </Link>
             </div>
           </div>
           <img

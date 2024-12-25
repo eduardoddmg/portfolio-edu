@@ -3,8 +3,14 @@
     "badge": "Disponível para novas oportunidades",
     "title": "Eduardo Melo",
     "description": "Sou Eduardo Melo, um desenvolvedor frontend especializado em React e Next.js. Transformo ideias em experiências digitais excepcionais e busco contribuir para o sucesso de empresas inovadoras.",
-    "primaryButton": "Entre em contato",
-    "secondaryButton": "Veja meus projetos"
+    "primaryButton": {
+      "text": "Entre em contato",
+      "href": "#"
+    },
+    "secondaryButton": {
+      "text": "Conheça meu trabalho",
+      "href": "/projetos"
+    }
   },
   "features": {
     "title": "Minhas Especialidades",

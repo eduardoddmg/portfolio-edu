@@ -1,7 +1,7 @@
-import Blog from './blog';
-import CTA from './call-to-action';
-import Features from './features';
-import Hero from './hero';
+import Blog from '@/components/landing-page/blog';
+import CTA from '@/components/landing-page/call-to-action';
+import Features from '@/components/landing-page/features';
+import Hero from '@/components/landing-page/hero';
 
 const Page = () => {
   return (
