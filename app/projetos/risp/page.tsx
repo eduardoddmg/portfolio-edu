@@ -45,9 +45,15 @@ const Mapa: React.FC = () => {
     setIsClient(true);
 
     // Carrega o arquivo GeoJSON
-    import('@/data/risp.geojson')
+    fetch('/risp/risp.geojson')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Erro ao carregar o GeoJSON: ${response.statusText}`);
+        }
+        return response.json();
+      })
       .then((data) => {
-        setGeoJsonData(data.default);
+        setGeoJsonData(data);
       })
       .catch((error) => {
         console.error('Erro ao carregar o GeoJSON:', error);
@@ -58,11 +64,11 @@ const Mapa: React.FC = () => {
   const maceioCoordinates: [number, number] = [-9.6658, -35.735];
 
   // Função para customizar estilos baseados nas propriedades do GeoJSON
-  const getFeatureStyle = (feature: any) => {
+  const getFeatureStyle = (feature: { properties: { RISP: number } }) => {
     const risp = feature.properties.RISP;
 
     // Define cores diferentes com base no valor de RISP
-    const colors = {
+    const colors: { [key: number]: string } = {
       1: '#FF0000', // Vermelho
       2: '#00FF00', // Verde
       3: '#0000FF', // Azul
@@ -103,7 +109,7 @@ const Mapa: React.FC = () => {
           {geoJsonData && (
             <GeoJSON
               data={geoJsonData}
-              style={getFeatureStyle}
+              style={getFeatureStyle as L.PathOptions}
               onEachFeature={(feature, layer) => {
                 if (feature.properties && feature.properties.RISP) {
                   layer.bindPopup(
