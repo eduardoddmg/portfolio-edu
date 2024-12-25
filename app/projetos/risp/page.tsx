@@ -37,14 +37,10 @@ const GeoJSON = dynamic(
 );
 
 const Mapa: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
   const [geoJsonData, setGeoJsonData] = useState(null);
 
-  // Este efeito roda apenas no lado do cliente
+  // Carrega o GeoJSON no lado do cliente
   useEffect(() => {
-    setIsClient(true);
-
-    // Carrega o arquivo GeoJSON
     fetch('/risp/risp.geojson')
       .then((response) => {
         if (!response.ok) {
@@ -90,37 +86,35 @@ const Mapa: React.FC = () => {
         As informações foram retiradas do portal dados al. São dados abertos
         disponíveis para qualquer um.
       </p>
-      {isClient && (
-        <MapContainer
-          center={maceioCoordinates}
-          zoom={8}
-          style={{ height: '100%', width: '100%' }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      <MapContainer
+        center={maceioCoordinates}
+        zoom={8}
+        style={{ height: '100%', width: '100%' }}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+
+        <Marker position={maceioCoordinates}>
+          <Popup>Maceió, AL - Brasil</Popup>
+        </Marker>
+
+        {/* Camada GeoJSON com estilos customizados */}
+        {geoJsonData && (
+          <GeoJSON
+            data={geoJsonData}
+            style={getFeatureStyle as L.PathOptions}
+            onEachFeature={(feature, layer) => {
+              if (feature.properties && feature.properties.RISP) {
+                layer.bindPopup(
+                  `<strong>RISP: ${feature.properties.RISP}</strong>`
+                );
+              }
+            }}
           />
-
-          <Marker position={maceioCoordinates}>
-            <Popup>Maceió, AL - Brasil</Popup>
-          </Marker>
-
-          {/* Camada GeoJSON com estilos customizados */}
-          {geoJsonData && (
-            <GeoJSON
-              data={geoJsonData}
-              style={getFeatureStyle as L.PathOptions}
-              onEachFeature={(feature, layer) => {
-                if (feature.properties && feature.properties.RISP) {
-                  layer.bindPopup(
-                    `<strong>RISP: ${feature.properties.RISP}</strong>`
-                  );
-                }
-              }}
-            />
-          )}
-        </MapContainer>
-      )}
+        )}
+      </MapContainer>
     </div>
   );
 };
