@@ -8,6 +8,10 @@ const nextConfig = {
       test: /\.md$/,
       use: 'raw-loader',
     });
+    config.module.rules.push({
+      test: /\.geojson$/,
+      use: ['json-loader'],
+    });
     return config;
   },
 };

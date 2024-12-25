@@ -108,10 +108,10 @@
         "image": "https://shadcnblocks.com/images/block/placeholder-dark-1.svg"
       },
       {
-        "id": "project-2",
-        "title": "Gerador de Dietas com GPT",
-        "summary": "Aplicação que utiliza GPT para gerar planos de dieta personalizados com base nas preferências do usuário.",
-        "label": "Next.js, OpenAI API",
+        "id": "risp",
+        "title": "Regiões de Segurança Pública",
+        "summary": "As Regiões Integradas de Segurança Pública - RISP de Alagoas objetivam a articulação territorial regional, no nível tático, da SSP/AL",
+        "label": "Next.js",
         "author": "Eduardo Melo",
         "date": "Nov 2024",
         "href": "#",
