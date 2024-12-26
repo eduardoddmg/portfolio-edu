@@ -1,19 +1,10 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 import { useEffect, useState } from 'react';
+import 'leaflet/dist/leaflet.css';
 
-// Corrige o problema dos ícones padrão do Leaflet
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-});
-
-// Importação dinâmica do MapContainer e outros componentes
+// Importação dinâmica dos componentes do React-Leaflet
 const MapContainer = dynamic(
   () => import('react-leaflet').then((mod) => mod.MapContainer),
   { ssr: false }
@@ -31,16 +22,25 @@ const Popup = dynamic(() => import('react-leaflet').then((mod) => mod.Popup), {
 });
 const GeoJSON = dynamic(
   () => import('react-leaflet').then((mod) => mod.GeoJSON),
-  {
-    ssr: false,
-  }
+  { ssr: false }
 );
 
 const Mapa: React.FC = () => {
   const [geoJsonData, setGeoJsonData] = useState(null);
 
-  // Carrega o GeoJSON no lado do cliente
   useEffect(() => {
+    // Configuração dinâmica do Leaflet (para corrigir o problema de ícones)
+    import('leaflet').then((L) => {
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl:
+          'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+        iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+        shadowUrl:
+          'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+      });
+    });
+
+    // Carregamento do arquivo GeoJSON
     fetch('/risp/risp.geojson')
       .then((response) => {
         if (!response.ok) {
@@ -56,14 +56,13 @@ const Mapa: React.FC = () => {
       });
   }, []);
 
-  // Define as coordenadas de Maceió
+  // Coordenadas de Maceió
   const maceioCoordinates: [number, number] = [-9.6658, -35.735];
 
-  // Função para customizar estilos baseados nas propriedades do GeoJSON
+  // Função para estilizar as regiões do GeoJSON
   const getFeatureStyle = (feature: { properties: { RISP: number } }) => {
     const risp = feature.properties.RISP;
 
-    // Define cores diferentes com base no valor de RISP
     const colors: { [key: number]: string } = {
       1: '#FF0000', // Vermelho
       2: '#00FF00', // Verde
@@ -100,7 +99,6 @@ const Mapa: React.FC = () => {
           <Popup>Maceió, AL - Brasil</Popup>
         </Marker>
 
-        {/* Camada GeoJSON com estilos customizados */}
         {geoJsonData && (
           <GeoJSON
             data={geoJsonData}
