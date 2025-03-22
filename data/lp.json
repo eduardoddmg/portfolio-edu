@@ -5,11 +5,11 @@
     "description": "Sou Eduardo Melo, um desenvolvedor frontend especializado em React e Next.js. Transformo ideias em experiências digitais excepcionais e busco contribuir para o sucesso de empresas inovadoras.",
     "primaryButton": {
       "text": "Entre em contato",
-      "href": "#"
+      "href": "https://api.whatsapp.com/send?phone=5582996038479&text=Ol%C3%A1%2C%20eu%20quero%20solicitar%20um%20or%C3%A7amento!"
     },
     "secondaryButton": {
       "text": "Conheça meu trabalho",
-      "href": "/projetos"
+      "href": "https://instagram.com/eduardoddmg"
     }
   },
   "features": {

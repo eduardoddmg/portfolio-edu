@@ -5,10 +5,17 @@ import { Button } from '@/components/ui/button';
 
 import lp from '@/data/lp.json';
 import Link from 'next/link';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '../ui/carousel';
 
 const Hero = () => {
   return (
-    <section>
+    <section className="p-5">
       <div className="container">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -36,11 +43,33 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <img
-            src="https://shadcnblocks.com/images/block/placeholder-1.svg"
-            alt="placeholder hero"
-            className="max-h-96 w-full rounded-md object-cover"
-          />
+          <Carousel className="mx-10">
+            <CarouselContent>
+              <CarouselItem>
+                <img
+                  src="https://shadcnblocks.com/images/block/placeholder-1.svg"
+                  alt="placeholder hero"
+                  className="max-h-96 w-full rounded-md object-cover"
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <img
+                  src="https://shadcnblocks.com/images/block/placeholder-2.svg"
+                  alt="placeholder hero"
+                  className="max-h-96 w-full rounded-md object-cover"
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <img
+                  src="https://shadcnblocks.com/images/block/placeholder-3.svg"
+                  alt="placeholder hero"
+                  className="max-h-96 w-full rounded-md object-cover"
+                />
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselNext />
+            <CarouselPrevious />
+          </Carousel>
         </div>
       </div>
     </section>
