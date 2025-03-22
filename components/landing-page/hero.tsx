@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '../ui/carousel';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -43,27 +44,24 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <Carousel className="mx-10">
+          <Carousel className="mx-10" opts={{ loop: true }}>
             <CarouselContent>
-              <CarouselItem>
-                <img
-                  src="https://shadcnblocks.com/images/block/placeholder-1.svg"
-                  alt="placeholder hero"
-                  className="max-h-96 w-full rounded-md object-cover"
+              <CarouselItem className="flex justify-center items-center">
+                <Image
+                  src="/trinta-linhas.png"
+                  alt="Trinta Linhas - Redação"
+                  width={400}
+                  height={300}
+                  className="rounded-md object-cover w-full h-[400px]"
                 />
               </CarouselItem>
-              <CarouselItem>
-                <img
-                  src="https://shadcnblocks.com/images/block/placeholder-2.svg"
-                  alt="placeholder hero"
-                  className="max-h-96 w-full rounded-md object-cover"
-                />
-              </CarouselItem>
-              <CarouselItem>
-                <img
-                  src="https://shadcnblocks.com/images/block/placeholder-3.svg"
-                  alt="placeholder hero"
-                  className="max-h-96 w-full rounded-md object-cover"
+              <CarouselItem className="flex justify-center items-center">
+                <Image
+                  src="/elisama.png"
+                  alt="Elisama - Professora"
+                  width={400}
+                  height={300}
+                  className="rounded-md object-cover w-full h-[400px]"
                 />
               </CarouselItem>
             </CarouselContent>
